@@ -1,0 +1,20 @@
+.vote input + label{
+    position: relative;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    border-bottom: 1px solid red;
+}
+.vote input + label:before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 20px;
+    border-bottom: 2px solid green;
+    border-right: 2px solid green;
+    transform: rotate(45deg);
+    bottom: -2;
+    right: 9px;
+    transition: 3s;
+}
+.vote input + label

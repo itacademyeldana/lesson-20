@@ -1,0 +1,19 @@
+@media (max-width: 768px) {
+    .header__burger {
+        display: block;
+    }
+    .header__nav {
+        display: none;
+    }
+    .about__grid {
+        grid-template-columns: 1fr;
+        row-gap: 40px;
+    }
+    .about__img {
+        height: 400px;
+    }
+    .cars__grid {
+        grid-template-columns: 1fr;
+        row-gap: 40px;
+    }
+}

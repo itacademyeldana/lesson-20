@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'Reem Kufi Fun';
+    src: url('../fonts/ReemKufiFun-Medium.eot');
+    src: url('../fonts/ReemKufiFun-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ReemKufiFun-Medium.woff2') format('woff2'),
+        url('../fonts/ReemKufiFun-Medium.woff') format('woff'),
+        url('../fonts/ReemKufiFun-Medium.ttf') format('truetype'),
+        url('../fonts/ReemKufiFun-Medium.svg#ReemKufiFun-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Reem Kufi Fun';
+    src: url('../fonts/ReemKufiFun-Bold.eot');
+    src: url('../fonts/ReemKufiFun-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ReemKufiFun-Bold.woff2') format('woff2'),
+        url('../fonts/ReemKufiFun-Bold.woff') format('woff'),
+        url('../fonts/ReemKufiFun-Bold.ttf') format('truetype'),
+        url('../fonts/ReemKufiFun-Bold.svg#ReemKufiFun-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Reem Kufi Fun';
+    src: url('../fonts/ReemKufiFun-SemiBold.eot');
+    src: url('../fonts/../fonts/ReemKufiFun-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ReemKufiFun-SemiBold.woff2') format('woff2'),
+        url('../fonts/ReemKufiFun-SemiBold.woff') format('woff'),
+        url('../fonts/ReemKufiFun-SemiBold.ttf') format('truetype'),
+        url('../fonts/ReemKufiFun-SemiBold.svg#ReemKufiFun-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Reem Kufi Fun';
+    src: url('../fonts/ReemKufiFun-Regular.eot');
+    src: url('../fonts/ReemKufiFun-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ReemKufiFun-Regular.woff2') format('woff2'),
+        url('../fonts/ReemKufiFun-Regular.woff') format('woff'),
+        url('../fonts/ReemKufiFun-Regular.ttf') format('truetype'),
+        url('../fonts/ReemKufiFun-Regular.svg#ReemKufiFun-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+

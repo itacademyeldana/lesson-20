@@ -1,0 +1,92 @@
+@import './fonts.css';
+body {
+    font-family: 'Roboto', sans-serif;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+/* UNIQUE */
+.section {
+    max-width: 100%;
+    margin: 0 auto;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-repeat: no-repeat;
+}
+.col-4 {
+    width: 33.33333%;
+}
+/* UNIQUE */
+/* SECTION */
+.conteiner {
+    width: 1200px;
+    padding: 1px 16px;
+    margin: 0 auto;
+}
+.supconteiner {
+    width: 580px;
+    height: 44px;
+    margin: 0 auto;
+}
+.meet__suptitle {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #E6B939;
+}
+.meet__title {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 43px;
+    text-align: center;
+    color: #575445;
+    margin-bottom: 7px;
+}
+.meet__text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #575445;
+    height: 44px;
+}
+.meet__card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 21px;
+}
+.meet__a {
+    position: relative;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
+    color: #575445;
+    text-align: center;
+    margin-left: 500px;
+}
+.texxt {
+    position: absolute;
+    top: 200px;;
+    left: 170px;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+    color: #575445;
+}
+/* SECTION */

@@ -1,0 +1,8 @@
+.boxx {
+    display: inline-block;
+    position: fixed;
+    width: 1200px;
+    height: 20px;
+    background-color: rgb(247, 69, 238);
+    padding: 30px;
+}

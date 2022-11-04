@@ -1,0 +1,36 @@
+*  {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+}
+
+.conteiner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.cards {
+    max-width: 100%;
+    padding: 80px 0;
+    
+}
+.cards__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+.cardd {
+    height: 100%;
+    width: 100%;
+}
+
+.grid__img_two {
+    width: 379px;
+    height: 473px;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+}

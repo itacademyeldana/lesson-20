@@ -1,0 +1,39 @@
+.qwer {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    background-color: aliceblue;
+}
+.green {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    position: absolute;
+    bottom: 0px;
+}
+.blue {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: absolute;
+    z-index: 4;
+    top: 75px;
+    right: 200px;
+}
+.red {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    top: 150px;
+    left: 150px;
+}
+.orange {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    position: absolute;
+    right: 90px;
+    bottom: 120px;
+
+}

@@ -1,0 +1,49 @@
+/* .grid__container {
+    display: grid;
+    grid-template-areas:"post-1 post-1 post-2"
+                        "post-1 post-1 post-3"
+                        "post-6 post-5 post-4";
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows:repeat(3, 200px);
+
+} */
+.block-1 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 150px;
+    column-gap: 20px; 
+    margin-bottom: 20px;
+
+}
+.post-1 {
+    background-color: rgb(187, 66, 231);
+}
+.post-2 {
+    background-color: rgb(226, 235, 62);
+}
+.block-2 {
+    display: grid;
+    grid-template-areas:"post-3 post-3 post-6"
+                        "post-4 post-5 post-6";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 15px;
+}
+.post-3 {
+    background-color: rgb(46, 177, 198);
+    grid-area: post-3;
+    margin-bottom: 20px;
+
+}
+.post-4 {
+    background-color: rgb(70, 192, 46);
+    grid-area: post-4;
+}
+.post-5 {
+    background-color: rgb(115, 51, 199);
+    grid-area: post-5;
+}
+.post-6 {
+    background-color: rgb(215, 48, 118);
+    grid-area: post-6;
+}

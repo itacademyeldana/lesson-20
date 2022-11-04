@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <!--[if IE]>
+      <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=edge"/>
+      <![endif]-->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <title>Границы в CSS (border, border-style, border-width, border-color, border-radius)</title>
+
+            <link rel="apple-touch-icon" sizes="120x120" href="/bitrix/templates/main/favicon/apple-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/bitrix/templates/main/favicon/apple-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/bitrix/templates/main/favicon/apple-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/bitrix/templates/main/favicon/apple-icon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192"  href="/bitrix/templates/main/favicon/android-icon-192x192.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/bitrix/templates/main/favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="/bitrix/templates/main/favicon/favicon-96x96.png">
+
+      <meta name="msapplication-TileColor" content="#0d6e99">
+      <meta name="msapplication-TileImage" content="/bitrix/templates/main/favicon/ms-icon-144x144.png">
+      <meta name="theme-color" content="#0d6e99">
+
+      <meta property="og:title" content="Границы в CSS (border, border-style, border-width, border-color, border-radius)" />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:creator" content="@MouseDCru">
+      <meta name="twitter:title" content="Границы в CSS (border, border-style, border-width, border-color, border-radius)">
+
+               <meta name="twitter:description" content="CSS свойство border помогает стилизовать границы. К примеру, сделать рамку с закругленными краями. В этой статье разберём основные функции этого свойства."/>
+         <meta name="twitter:image" content="https://www.mousedc.ru/bitrix/templates/main/img/ogimg.jpg" />
+         <meta property="og:description" content="CSS свойство border помогает стилизовать границы. К примеру, сделать рамку с закругленными краями. В этой статье разберём основные функции этого свойства.">
+         <meta property="og:image" content="https://www.mousedc.ru/bitrix/templates/main/img/ogimg.jpg" />
+         <meta itemprop="image" content="https://www.mousedc.ru/bitrix/templates/main/img/ogimg.jpg" />
+         
+
+      
+      
+      
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="CSS свойство border помогает стилизовать границы. К примеру, сделать рамку с закругленными краями. В этой статье разберём основные функции этого свойства." />
+<link rel="canonical" href="https://www.mousedc.ru/learning/20-granitsy-border-style-width-color-radius-css/" />
+<script type="text/javascript" data-skip-moving="true">(function(w, d) {var v = w.frameCacheVars = {'CACHE_MODE':'HTMLCACHE','storageBlocks':[],'dynamicBlocks':{'SidebarPromoMouseMove':'cc7819055cde'},'AUTO_UPDATE':true,'AUTO_UPDATE_TTL':'86400','version':'2'};var inv = false;if (v.AUTO_UPDATE === false){if (v.AUTO_UPDATE_TTL && v.AUTO_UPDATE_TTL > 0){var lm = Date.parse(d.lastModified);if (!isNaN(lm)){var td = new Date().getTime();if ((lm + v.AUTO_UPDATE_TTL * 1000) >= td){w.frameRequestStart = false;w.preventAutoUpdate = true;return;}inv = true;}}else{w.frameRequestStart = false;w.preventAutoUpdate = true;return;}}var r = w.XMLHttpRequest ? new XMLHttpRequest() : (w.ActiveXObject ? new w.ActiveXObject("Microsoft.XMLHTTP") : null);if (!r) { return; }w.frameRequestStart = true;var m = v.CACHE_MODE; var l = w.location; var x = new Date().getTime();var q = "?bxrand=" + x + (l.search.length > 0 ? "&" + l.search.substring(1) : "");var u = l.protocol + "//" + l.host + l.pathname + q;r.open("GET", u, true);r.setRequestHeader("BX-ACTION-TYPE", "get_dynamic");r.setRequestHeader("X-Bitrix-Composite", "get_dynamic");r.setRequestHeader("BX-CACHE-MODE", m);r.setRequestHeader("BX-CACHE-BLOCKS", v.dynamicBlocks ? JSON.stringify(v.dynamicBlocks) : "");if (inv){r.setRequestHeader("BX-INVALIDATE-CACHE", "Y");}try { r.setRequestHeader("BX-REF", d.referrer || "");} catch(e) {}if (m === "APPCACHE"){r.setRequestHeader("BX-APPCACHE-PARAMS", JSON.stringify(v.PARAMS));r.setRequestHeader("BX-APPCACHE-URL", v.PAGE_URL ? v.PAGE_URL : "");}r.onreadystatechange = function() {if (r.readyState != 4) { return; }var a = r.getResponseHeader("BX-RAND");var b = w.BX && w.BX.frameCache ? w.BX.frameCache : false;if (a != x || !((r.status >= 200 && r.status < 300) || r.status === 304 || r.status === 1223 || r.status === 0)){var f = {error:true, reason:a!=x?"bad_rand":"bad_status", url:u, xhr:r, status:r.status};if (w.BX && w.BX.ready && b){BX.ready(function() {setTimeout(function(){BX.onCustomEvent("onFrameDataRequestFail", [f]);}, 0);});}w.frameRequestFail = f;return;}if (b){b.onFrameDataReceived(r.responseText);if (!w.frameUpdateInvoked){b.update(false);}w.frameUpdateInvoked = true;}else{w.frameDataString = r.responseText;}};r.send();var p = w.performance;if (p && p.addEventListener && p.getEntries && p.setResourceTimingBufferSize){var e = 'resourcetimingbufferfull';var h = function() {if (w.BX && w.BX.frameCache && w.BX.frameCache.frameDataInserted){p.removeEventListener(e, h);}else {p.setResourceTimingBufferSize(p.getEntries().length + 50);}};p.addEventListener(e, h);}})(window, document);</script>
+<script type="text/javascript" data-skip-moving="true">(function(w, d, n) {var cl = "bx-core";var ht = d.documentElement;var htc = ht ? ht.className : undefined;if (htc === undefined || htc.indexOf(cl) !== -1){return;}var ua = n.userAgent;if (/(iPad;)|(iPhone;)/i.test(ua)){cl += " bx-ios";}else if (/Android/i.test(ua)){cl += " bx-android";}cl += (/(ipad|iphone|android|mobile|touch)/i.test(ua) ? " bx-touch" : " bx-no-touch");cl += w.devicePixelRatio && w.devicePixelRatio >= 2? " bx-retina": " bx-no-retina";var ieVersion = -1;if (/AppleWebKit/.test(ua)){cl += " bx-chrome";}else if ((ieVersion = getIeVersion()) > 0){cl += " bx-ie bx-ie" + ieVersion;if (ieVersion > 7 && ieVersion < 10 && !isDoctype()){cl += " bx-quirks";}}else if (/Opera/.test(ua)){cl += " bx-opera";}else if (/Gecko/.test(ua)){cl += " bx-firefox";}if (/Macintosh/i.test(ua)){cl += " bx-mac";}ht.className = htc ? htc + " " + cl : cl;function isDoctype(){if (d.compatMode){return d.compatMode == "CSS1Compat";}return d.documentElement && d.documentElement.clientHeight;}function getIeVersion(){if (/Opera/i.test(ua) || /Webkit/i.test(ua) || /Firefox/i.test(ua) || /Chrome/i.test(ua)){return -1;}var rv = -1;if (!!(w.MSStream) && !(w.ActiveXObject) && ("ActiveXObject" in w)){rv = 11;}else if (!!d.documentMode && d.documentMode >= 10){rv = 10;}else if (!!d.documentMode && d.documentMode >= 9){rv = 9;}else if (d.attachEvent && !/Opera/.test(ua)){rv = 8;}if (rv == -1 || rv == 8){var re;if (n.appName == "Microsoft Internet Explorer"){re = new RegExp("MSIE ([0-9]+[\.0-9]*)");if (re.exec(ua) != null){rv = parseFloat(RegExp.$1);}}else if (n.appName == "Netscape"){rv = 11;re = new RegExp("Trident/.*rv:([0-9]+[\.0-9]*)");if (re.exec(ua) != null){rv = parseFloat(RegExp.$1);}}}return rv;}})(window, document, navigator);</script>
+
+
+<link href="/bitrix/templates/main/css/page-article.css?16596956927956" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/templates/main/css/highlight.min.css?16596956921050" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/templates/main/components/bitrix/news.detail/learning/style.css?16596956921180" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/templates/main/css/styles.css?165969569264074" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="/bitrix/templates/main/components/bitrix/news.list/news_side/style.css?1659695692668" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="/bitrix/templates/main/components/bitrix/system.pagenavigation/main/style.css?16596956921206" type="text/css"  data-template-style="true"  rel="stylesheet" />
+
+
+
+
+
+
+
+   </head>
+   <body>
+      
+      
+      <!-- BEGIN #header -->
+      <header id="header" class="header">
+         <div id="header-content" class="grid maxwidth clearfix">
+            <!-- .logo -->
+            <div class="header-logo col-tab-4 newrow-tab col-2 newrow">
+               <a href="/" class="logo">
+               <img src="/bitrix/templates/main/img/logo_white.svg" alt="MouseDC">
+               </a>
+            </div>
+            <!-- /.logo -->
+            <!-- .menu & login -->
+            <div class="header-menu col-8">
+                
+<nav class="menu">
+  <ul class="menu__list on-desktop">
+     <li class="menu__item  ">
+        <a href="/">Хостинг</a>
+        <ul class="sub-menu">
+           <li class=""><a href="/index.php">Хостинг для сайта</a></li>
+           <li class="has-second-menu "><a href="/hosting/cms.php">CMS хостинг</a>
+               <ul class="sub-second-menu">
+                                       <li class="">
+                        <a href="/hosting/cms.php">Для любой CMS</a>
+                     </li>
+                                       <li class="">
+                        <a href="/hosting/bitrix.php">Для Bitrix</a>
+                     </li>
+                                       <li class="">
+                        <a href="/hosting/wordpress.php">Для WordPress</a>
+                     </li>
+                                       <li class="">
+                        <a href="/hosting/drupal.php">Для Drupal</a>
+                     </li>
+                                       <li class="">
+                        <a href="/hosting/joomla.php">Для Joomla</a>
+                     </li>
+                                 </ul>
+           </li>
+           <li class=""><a href="/hosting/vhost.php">Виртуальный хостинг</a></li>
+        </ul>
+     </li>
+          <li class="menu__item ">
+        <a href="/domains/">Домены</a>
+     </li>
+          <li class="menu__item menu__item-current">
+        <a href="/learning/">Статьи</a>
+     </li>
+          <li class="menu__item ">
+        <a href="/news/">Новости</a>
+     </li>
+     <li class="menu__item ">
+        <a href="/partners/">Партнёрам</a>
+     </li>
+  </ul>
+</nav>
+            </div>
+            <!-- /.menu & login -->
+               <!-- .login -->
+               <div class="header-login col-tab-8 col-2">
+                  <a href="https://www.mousedc.ru/my.php?theme=client" class="sigup button button-secondary">Войти »</a>
+                                                      <span class="menu-toggle-wrap open-modal button button-secondary on-mobile on-tablet" data-modal="#mob-menu">
+                     <span data-id="#navigation" class="menu-toggle">
+                        <span class="menu-toogle__icon"></span>
+                        <span class="menu-toogle__icon"></span>
+                        <span class="menu-toogle__icon"></span>
+                     </span>
+                  </span>
+               </div>
+               <!-- /.login -->
+         </div>
+      </header>
+      <!-- END #header -->
+
+            <div class="pagewrap page-article ">
+
+                  <main id="content" class="content maxwidth">
+
+                           <!-- BEGIN .breadcrubms -->
+               <div class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+           <a itemprop="item" href="/" ><span itemprop="name">MouseDC.ru</span></a>
+           <meta itemprop="position" content="1" />
+        </span> » 
+        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+           <a itemprop="item" href="/learning/" ><span itemprop="name">Обучение</span></a>
+           <meta itemprop="position" content="2" />
+        </span> » 
+        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+           <a itemprop="item" href="/learning/?section=8-css" ><span itemprop="name">CSS</span></a>
+           <meta itemprop="position" content="3" />
+        </span> » 
+        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+           <a itemprop="item" href="/learning/?section=10-svoystva-css" ><span itemprop="name">Свойства</span></a>
+           <meta itemprop="position" content="4" />
+        </span> » Границы в CSS (border, border-style, border-width, border-color, border-radius)</div>               <!-- END .breadcrubms -->
+            
+                                             <div class="article-wrap grid pt--30">
+
+                     <div class="col-8 newrow content-container">
+                  <article itemscope itemtype="http://schema.org/Article" data-articleid="20" id="entry" class="entry article">
+      <div class="entry-text">
+         <h1 itemprop="name" class="">Границы в CSS (border, border-style, border-width, border-color, border-radius)</h1>
+         <div itemprop="articleBody" class="article_body">
+            CSS свойство border - это универсальное свойство. Через его значение можно задать сразу несколько свойств: толщину границы, стиль и цвет. В коде это будет выглядеть так: 
+<pre><code>&lt;div style="border: 3px solid #c0d2de;"&gt;Мышь&lt;/div&gt;</code></pre> 
+В значении свойства border стоит сначала толщина (<b>3px</b>), затем стиль (<b>solid</b>) и в конце указан цвет (<b>#c0d2de;</b>). Результат будет таким: 
+<pre><div style="border: 3px solid #c0d2de;display:inline-block;">Мышь</div></pre>
+Свойство border универсальное. Поэтому если открыть редактор CSS кода в браузере (читайте об этом в статье "<a href="/learning/28/">Редактор CSS в вашем браузере</a>"), то можно увидеть стрелочку перед значением свойства:
+<img src="/upload/learning/css/20/1.jpg">
+Если кликнуть на эту стрелочку, то выпадет весь список свойств, которые задаются этой строкой:
+<img src="/upload/learning/css/20/2.jpg">
+Как можно увидеть, в списке перечисляются все четыре границы (-right-, -left-, -top-, -bottom-). И каждой из границ задаётся одно и то же значение свойств. 
+<div class="textbox textbox-blue">Если в названии свойств не ставить -right-, -left-, -top-, -bottom-, то значение свойств border-* будут автоматически применено ко всем четырём границам.</div>
+Выделим и разбёрем основные свойства: border-color, border-style, border-width. Обратите внимание, что бесполезно задавать только одно из этих свойств, но не ставить остальные. Необходимо одновременно задать толщину рамки. стиль и цвет, чтобы у элемента появилась рамка. Иначе рамки не будет. Поэтому эти свойства бесполезны по отдельности.
+<h2 itemprop="headline" >Стиль рамки (border-style)</h2>
+ Разберём на примерах различные значения свойства border-style: <br>
+<div>
+<br>
+<div style="border: 3px none #c0d2de;display:inline-block;padding:4px 10px;">none</div> - нет границ (толщина границ равна нулю)<br><br>
+<div style="border: 3px hidden #c0d2de;display:inline-block;padding:4px 10px;">hidden</div> - нет границ (то же самое, что и none) <br><br>
+<div style="border: 3px dotted #c0d2de;display:inline-block;padding:4px 10px;">dotted</div> - граница в виде точек <br><br>
+<div style="border: 3px dashed #c0d2de;display:inline-block;padding:4px 10px;">dashed</div> - граница в виде штрихов<br><br>
+<div style="border: 3px solid #c0d2de;display:inline-block;padding:4px 10px;">solid</div> - сплошная линия<br><br>
+<div style="border: 3px double #c0d2de;display:inline-block;padding:4px 10px;">double</div> - двойная сплошная линия<br><br>
+<div style="border: 3px groove #c0d2de;display:inline-block;padding:4px 10px;">groove</div> - линия в виде канавки или паза<br><br>
+<div style="border: 3px ridge #c0d2de;display:inline-block;padding:4px 10px;">ridge</div> - противоположность к groove<br><br>
+<div style="border: 3px inset #c0d2de;display:inline-block;padding:4px 10px;">inset</div> - рамка с тенью с одной стороны<br><br>
+<div style="border: 3px outset #c0d2de;display:inline-block;padding:4px 10px;">outset</div> - противоположность к inset - тень с другой стороны
+</div>
+<h2 itemprop="headline" >Толщина рамки (border-width)</h2>
+Значение свойства border-width задаётся в пикселях или в названии толщины. К примеру:
+<ul>
+<li>"thin" = 2 px</li>
+<li>"medium" = 4 px</li>
+<li>"thick" = 6 px</li>
+</ul>
+Примеры использования:
+<pre><code>&lt;div style="border: 3px solid #c0d2de;"&gt;Мышь&lt;/div&gt;
+&lt;div style="border: thick solid #c0d2de;"&gt;Мышь&lt;/div&gt;
+</code></pre> 
+<pre><div style="border: 3px solid #c0d2de;display:inline-block;">Мышь</div> <div style="border: thick solid #c0d2de;display:inline-block;">Мышь</div></pre>
+<h2 itemprop="headline" >Цвет рамки (border-color)</h2>
+Свойство border-color окрашивает рамку в определённый цвет. Значение этого свойства задаётся аналогично значению свойства "color", то есть через RGB, HEX или через название цвета (читайте больше в статье "<a href="/learning/12/">Цвет текста (color)</a>").
+<h2 itemprop="headline" >Скругление краёв (border-radius)</h2>
+Существует свойство "border-radius", которое часто используют на сайтах. Оно делает скругление краёв. В качестве значения ему можно задавать как пиксели, так и проценты. Приведём пример:
+<pre><code>&lt;div style="border: 3px solid #c0d2de; border-radius: 8px;"&gt;Мышь&lt;/div&gt;</code></pre> 
+Получится такой результат
+<pre><div style="padding: 4px 10px;border: 3px solid #c0d2de; border-radius: 8px; display:inline-block;">Мышь</div></pre>
+А если задать значение в процентах, то можно получить овал, задав значение скругления в 50%:
+<pre><code>&lt;div style="border: 3px solid #c0d2de; border-radius: 50%;"&gt;Мышь&lt;/div&gt;</code></pre> 
+Результат будет таким: 
+<pre><div style="padding: 4px 10px;border: 3px solid #c0d2de; border-radius: 50%; display:inline-block;">Мышь</div></pre>
+Как и с остальными свойствами в этой статье, чтобы увидеть результат скругления, нужно задать значения для всех трёх свойств: border-style, border-width, border-color.         </div>
+      </div>
+
+      <link itemprop="mainEntityOfPage" href="/learning/20-granitsy-border-style-width-color-radius-css/">
+      <meta itemprop="dateModified" content="2021-01-19">
+
+   	<span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+   		<meta itemprop="name" content="MouseDC.ru">
+   		<meta itemprop="description" content="MouseDC.ru - хостинг, виртуальный хостинг, покупка доменов, проверка доменов, WHOIS, курсы создания сайтов, вебинары по созданию, курсы разработки сайтов, доработка сайтов, сопровождение сайтов, разработка сайтов, техподдержка сайтов">
+            	</span>
+
+   	<span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+   		<meta itemprop="name" content="MouseDC.ru">
+   		<span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+   			<img style="display:none;" itemprop="url image" alt="MouseDC.ru - хостинг, виртуальный хостинг, покупка доменов, проверка доменов, WHOIS, курсы создания сайтов, вебинары по созданию, курсы разработки сайтов, доработка сайтов, сопровождение сайтов, разработка сайтов, техподдержка сайтов" src="/bitrix/templates/main/favicon/android-icon-192x192.png">
+   		</span>
+   	</span>
+   </article>
+
+   
+         <div class="entry-related">
+         <div class="entry-related-title title">Cмотрите другие статьи:</div>
+         <div class="grid">
+            
+               <div class="entry-related-article entry-related-prev whitebox col-tab-6 newrow-tab col-6 newrow">
+                  <a href="/learning/16-shrifty-html-font-family-face/">Шрифты в HTML (font, font-family, font-face)</a>
+               </div>
+               <div class="entry-related-article entry-related-next whitebox col-tab-6 col-6">
+                  <a href="/learning/21-fon-css-background-color-image/">Фон в CSS (background-color, background-image)</a>
+               </div>
+
+                     </div>
+      </div>
+   
+   <div class="entry-useful">
+   <img src="/bitrix/templates/main/img/mouse-useful.svg" alt="Была ли статья полезной?" class="entry-useful-image">
+   <div class="entry-useful-question">
+      <span class="entry-useful-question-text">Была ли эта статья полезна?</span>
+      <span class="entry-useful-buttons-wrap">
+         <span onmousedown="ShowModal('js_mcontent_useful', 'Задайте нам любой вопрос по статье');" class="button button-ghost-dark">Есть вопрос?</span>
+      </span>
+   </div>
+   </div>
+
+<div class="entry-useful entry-adv">
+   <img src="/bitrix/templates/main/img/mouse/service.svg" alt="хостинг для сайтов" class="entry-useful-image">
+   <div class="entry-useful-question">
+      <span class="entry-useful-question-text">Закажите недорогой хостинг</span>
+      <span class="entry-useful-buttons-wrap">
+         <a href="https://my.mousedc.ru/" class="button button-ghost-dark">Заказать</a>
+      </span>
+   </div>
+   <p class="entry-useful-results">всего от 290 руб</p>
+</div>
+
+<div class="js_mcontent_useful" style="display:none;">
+   Если у Вас появились вопросы по материалам на нашем сайте, то пожалуйста, пришлите нам их на почтовый адрес <b>support@mousedc.ru</b>. Мы обязательно ответим.
+   <br>
+   <br>
+   Также Вы можете отправить нам свой отзыв на наши услуги, замечание или предложение. Мы  ценим наших клиентов и внимательно прислушиваемся ко всем замечаниям!
+</div>
+                        </div>
+               <!-- BEGIN #sidebar -->
+               <div id="sidebar" class="col-4 sidebar">
+                  <div class="sidebar-inner">
+                                             <div class="widget widget-search on-desktop">
+                           <form action="/learning/search/?q=" class="articles-search-form js_search">
+                              <label><input type="search" name="q" class="with-border" placeholder="Что  найти?"></label>
+                              <span class="submit-search-icon" onclick="$('.js_search').submit();">
+                                 <svg viewBox="0 0 52.966 52.966">
+                                    <path d="M51.704,51.273L36.845,35.82c3.79-3.801,6.138-9.041,6.138-14.82c0-11.58-9.42-21-21-21s-21,9.42-21,21s9.42,21,21,21 c5.083,0,9.748-1.817,13.384-4.832l14.895,15.491c0.196,0.205,0.458,0.307,0.721,0.307c0.25,0,0.499-0.093,0.693-0.279 C52.074,52.304,52.086,51.671,51.704,51.273z M21.983,40c-10.477,0-19-8.523-19-19s8.523-19,19-19s19,8.523,19,19 S32.459,40,21.983,40z"/>
+                                 </svg>
+                              </span>
+                           </form>
+                        </div>
+                     
+                     
+<div class="widget widget-sidenav whitebox">
+   <div class="sidenav-title">
+      <span class="sidenav-title-text">Навигация</span>
+      <span class="sidenav-mobile-toogle"></span>
+   </div>
+   <ul class="sidenav">
+               <li class="sidenav-item sidenav-item-has-children ">
+            <a href="/learning/?section=1-html">HTML</a>
+
+                           <span class="open-children now-closed"></span>
+               <ul class="sidenav-children sidenav-closed">
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=5-html-osnovy" class="">Основы</a>
+
+                        
+                     </li>
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=6-html-tegi" class="">Теги</a>
+
+                        
+                     </li>
+                                 </ul>
+                     </li>
+               <li class="sidenav-item sidenav-item-has-children ">
+            <a href="/learning/?section=8-css">CSS</a>
+
+                           <span class="open-children "></span>
+               <ul class="sidenav-children ">
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=9-osnovy-css" class="">Основы</a>
+
+                        
+                     </li>
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=10-svoystva-css" class="bold">Свойства</a>
+
+                        
+                     </li>
+                                 </ul>
+                     </li>
+               <li class="sidenav-item sidenav-item-has-children ">
+            <a href="/learning/?section=2-php">PHP</a>
+
+                           <span class="open-children now-closed"></span>
+               <ul class="sidenav-children sidenav-closed">
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=12-php-osnovy" class="">Основы</a>
+
+                        
+                     </li>
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=16-php-baza-dannykh" class="">База данных</a>
+
+                        
+                     </li>
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=17-php-obektno-orientirovannoe-programmirovanie" class="">Объектно-ориентированное программирование</a>
+
+                        
+                     </li>
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=57-laravel" class="">Laravel</a>
+
+                        
+                     </li>
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=75-yii" class="">Yii</a>
+
+                        
+                     </li>
+                                 </ul>
+                     </li>
+               <li class="sidenav-item sidenav-item-has-children ">
+            <a href="/learning/?section=4-sql">SQL</a>
+
+                           <span class="open-children now-closed"></span>
+               <ul class="sidenav-children sidenav-closed">
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=15-sql-osnovy" class="">Основы</a>
+
+                        
+                     </li>
+                                 </ul>
+                     </li>
+               <li class="sidenav-item sidenav-item-has-children ">
+            <a href="/learning/?section=3-sistemy-upravleniya-cms">CMS</a>
+
+                           <span class="open-children now-closed"></span>
+               <ul class="sidenav-children sidenav-closed">
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=18-wordpress" class="">WordPress</a>
+
+                                                   <span class="open-children now-closed"></span>
+                           <ul class="sidenav-children sidenav-closed">
+                                                               <li class="sidenav-item">
+                                    <a href="/learning/?section=35-wordpress-upravlenie" class=" ">Управление</a>
+                                 </li>
+                                                               <li class="sidenav-item">
+                                    <a href="/learning/?section=34-wordpress-razrabotka" class=" ">Разработка</a>
+                                 </li>
+                                                         </ul>
+                        
+                     </li>
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=36-joomla" class="">Joomla</a>
+
+                                                   <span class="open-children now-closed"></span>
+                           <ul class="sidenav-children sidenav-closed">
+                                                               <li class="sidenav-item">
+                                    <a href="/learning/?section=37-joomla-upravlenie" class=" ">Управление</a>
+                                 </li>
+                                                               <li class="sidenav-item">
+                                    <a href="/learning/?section=40-joomla-razrabotka" class=" ">Разработка</a>
+                                 </li>
+                                                         </ul>
+                        
+                     </li>
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=38-drupal" class="">Drupal</a>
+
+                                                   <span class="open-children now-closed"></span>
+                           <ul class="sidenav-children sidenav-closed">
+                                                               <li class="sidenav-item">
+                                    <a href="/learning/?section=41-drupal-upravlenie" class=" ">Управление</a>
+                                 </li>
+                                                               <li class="sidenav-item">
+                                    <a href="/learning/?section=39-drupal-razrabotka" class=" ">Разработка</a>
+                                 </li>
+                                                         </ul>
+                        
+                     </li>
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=44-modx" class="">MODX</a>
+
+                                                   <span class="open-children now-closed"></span>
+                           <ul class="sidenav-children sidenav-closed">
+                                                               <li class="sidenav-item">
+                                    <a href="/learning/?section=45-modx-upravlenie" class=" ">Управление</a>
+                                 </li>
+                                                               <li class="sidenav-item">
+                                    <a href="/learning/?section=46-modx-razrabotka" class=" ">Разработка</a>
+                                 </li>
+                                                         </ul>
+                        
+                     </li>
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=20-1s-bitriks" class="">1С-Битрикс</a>
+
+                                                   <span class="open-children now-closed"></span>
+                           <ul class="sidenav-children sidenav-closed">
+                                                               <li class="sidenav-item">
+                                    <a href="/learning/?section=42-bitrix-upravlenie" class=" ">Управление</a>
+                                 </li>
+                                                               <li class="sidenav-item">
+                                    <a href="/learning/?section=43-bitrix-razrabotka" class=" ">Разработка</a>
+                                 </li>
+                                                         </ul>
+                        
+                     </li>
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=47-opencart" class="">OpenCart</a>
+
+                                                   <span class="open-children now-closed"></span>
+                           <ul class="sidenav-children sidenav-closed">
+                                                               <li class="sidenav-item">
+                                    <a href="/learning/?section=48-opencart-upravlenie" class=" ">Управление</a>
+                                 </li>
+                                                               <li class="sidenav-item">
+                                    <a href="/learning/?section=50-opencart-razrabotka" class=" ">Разработка</a>
+                                 </li>
+                                                         </ul>
+                        
+                     </li>
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=54-datalife-engine" class="">DataLife Engine</a>
+
+                                                   <span class="open-children now-closed"></span>
+                           <ul class="sidenav-children sidenav-closed">
+                                                               <li class="sidenav-item">
+                                    <a href="/learning/?section=55-datalife-engine-upravlenie" class=" ">Управление</a>
+                                 </li>
+                                                         </ul>
+                        
+                     </li>
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=59-umi-cms" class="">UMI-CMS</a>
+
+                                                   <span class="open-children now-closed"></span>
+                           <ul class="sidenav-children sidenav-closed">
+                                                               <li class="sidenav-item">
+                                    <a href="/learning/?section=60-umi-cms-upravlenie" class=" ">Управление</a>
+                                 </li>
+                                                         </ul>
+                        
+                     </li>
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=61-prestashop" class="">PrestaShop</a>
+
+                                                   <span class="open-children now-closed"></span>
+                           <ul class="sidenav-children sidenav-closed">
+                                                               <li class="sidenav-item">
+                                    <a href="/learning/?section=62-prestashop-upravlenie" class=" ">Управление</a>
+                                 </li>
+                                                         </ul>
+                        
+                     </li>
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=63-craft-cms" class="">Craft CMS</a>
+
+                                                   <span class="open-children now-closed"></span>
+                           <ul class="sidenav-children sidenav-closed">
+                                                               <li class="sidenav-item">
+                                    <a href="/learning/?section=64-upravlenie-craft-cms" class=" ">Управление</a>
+                                 </li>
+                                                         </ul>
+                        
+                     </li>
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=65-phpbb" class="">phpBB</a>
+
+                                                   <span class="open-children now-closed"></span>
+                           <ul class="sidenav-children sidenav-closed">
+                                                               <li class="sidenav-item">
+                                    <a href="/learning/?section=66-upravlenie-phpbb" class=" ">Управление</a>
+                                 </li>
+                                                         </ul>
+                        
+                     </li>
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=69-cs-cart" class="">CS-Cart</a>
+
+                                                   <span class="open-children now-closed"></span>
+                           <ul class="sidenav-children sidenav-closed">
+                                                               <li class="sidenav-item">
+                                    <a href="/learning/?section=70-upravlenie-cs-cart" class=" ">Управление</a>
+                                 </li>
+                                                         </ul>
+                        
+                     </li>
+                                 </ul>
+                     </li>
+               <li class="sidenav-item sidenav-item-has-children ">
+            <a href="/learning/?section=21-javascript">JavaScript</a>
+
+                           <span class="open-children now-closed"></span>
+               <ul class="sidenav-children sidenav-closed">
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=22-javascript-osnovy" class="">Основы</a>
+
+                        
+                     </li>
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=23-javascript-osnovy-raboty-dom" class="">Работа с DOM</a>
+
+                        
+                     </li>
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=80-ajax" class="">AJAX</a>
+
+                        
+                     </li>
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=24-jquery" class="">jQuery</a>
+
+                        
+                     </li>
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=49-vue" class="">Vue</a>
+
+                        
+                     </li>
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=67-nodejs" class="">NodeJS</a>
+
+                        
+                     </li>
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=68-react" class="">React</a>
+
+                                                   <span class="open-children now-closed"></span>
+                           <ul class="sidenav-children sidenav-closed">
+                                                               <li class="sidenav-item">
+                                    <a href="/learning/?section=71-osnovy-react" class=" ">Основы React</a>
+                                 </li>
+                                                               <li class="sidenav-item">
+                                    <a href="/learning/?section=72-steyty-react" class=" ">Стейты в React</a>
+                                 </li>
+                                                               <li class="sidenav-item">
+                                    <a href="/learning/?section=74-komponent-react" class=" ">Компоненты React</a>
+                                 </li>
+                                                         </ul>
+                        
+                     </li>
+                                 </ul>
+                     </li>
+               <li class="sidenav-item sidenav-item-has-children ">
+            <a href="/learning/?section=19-servernoe-programmnoe-obespechenie">Серверное программное обеспечение</a>
+
+                           <span class="open-children now-closed"></span>
+               <ul class="sidenav-children sidenav-closed">
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=14-apache" class="">Apache</a>
+
+                        
+                     </li>
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=28-igrovye-servery" class="">Игровые серверы</a>
+
+                        
+                     </li>
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=73-linux" class="">Linux</a>
+
+                        
+                     </li>
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=76-mysql" class="">MySQL</a>
+
+                        
+                     </li>
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=78-docker" class="">Docker</a>
+
+                        
+                     </li>
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=79-nginx" class="">Nginx</a>
+
+                        
+                     </li>
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=81-ustranenie-oshibok" class="">Устранение ошибок</a>
+
+                        
+                     </li>
+                                 </ul>
+                     </li>
+               <li class="sidenav-item sidenav-item-has-children ">
+            <a href="/learning/?section=11-sredstva-razrabotki">Средства разработки</a>
+
+                     </li>
+               <li class="sidenav-item sidenav-item-has-children ">
+            <a href="/learning/?section=7-razvitie-i-prodvizhenie-sayta">Развитие и продвижение сайта</a>
+
+                           <span class="open-children now-closed"></span>
+               <ul class="sidenav-children sidenav-closed">
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=25-pochta-sait" class="">Почта</a>
+
+                        
+                     </li>
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=27-seo" class="">SEO</a>
+
+                        
+                     </li>
+                                 </ul>
+                     </li>
+               <li class="sidenav-item sidenav-item-has-children ">
+            <a href="/learning/?section=29-hosting-mousedc-ru">Хостинг MouseDC.ru</a>
+
+                           <span class="open-children now-closed"></span>
+               <ul class="sidenav-children sidenav-closed">
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=31-lichnyy-kabinet-hosting" class="">Личный кабинет</a>
+
+                        
+                     </li>
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=30-virtualnyy-hosting" class="">Виртуальный хостинг</a>
+
+                        
+                     </li>
+                                       <li class="sidenav-item">
+                        <a href="/learning/?section=32-domeny" class="">Домены</a>
+
+                        
+                     </li>
+                                 </ul>
+                     </li>
+         </ul>
+</div>
+                     
+
+<div class="widget widget-fresh-news whitebox">
+   <div class="fresh-news-title">
+      Последние новости
+   </div>
+
+   
+                     <a href="/news/635-ddos-ataka-registratora/">
+               <img src="/upload/resize_cache/iblock/e4c/300_150_2/4ncg27rzjsln220r6wc607a6m19uxws8.jpg" alt="DDoS атака на регистратора">
+            </a>
+         
+         <div class="fresh-news-title-text">
+            <a href="/news/635-ddos-ataka-registratora/">
+               DDoS атака на регистратора            </a>
+         </div>
+      
+                     <iframe height="150" id="VideoiFrameSidebar634" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" scrolling="no" allowfullscreen></iframe>
+
+                     
+         <div class="fresh-news-title-text">
+            <a href="/news/634-reklamnyy-paradoks/">
+               Подкаст 51. Рекламный парадокс            </a>
+         </div>
+      
+</div>
+
+                     
+<div class="widget widget-sidenav whitebox on-desktop">
+   <div class="sidenav-title">
+      <span class="sidenav-title-text">Сервисы</span>
+      <span class="sidenav-mobile-toogle"></span>
+   </div>
+   <ul class="sidenav">
+               <li class="sidenav-item sidenav-item-has-children">
+            <a href="/tools/pass.php" class="">Генератор паролей</a>
+         </li>
+               <li class="sidenav-item sidenav-item-has-children">
+            <a href="/tools/htpasswd.php" class="">Генератор .htpasswd</a>
+         </li>
+         </ul>
+</div>
+
+
+                     
+                        <div class="widget widget-offer whitebox popup" onmousedown="ShowModal('js_mcontent_mousepad','Коврик для мыши новым клиентам');">
+                           <img src="/bitrix/templates/main/img/mouse/mousepad.svg" alt="MouseDC.ru" class="offer-image">
+                           <p class="title">Коврик для мыши новым клиентам</p>
+                           <p class="offer-link">Оплатите хостинг на год и получите удобный коврик</p>
+                        </div>
+
+                        <div class="widget widget-offer whitebox popup" onmousedown="ShowModal('js_mcontent_moving','Помощь в переносе с другого хостинга');">
+                           <img src="/bitrix/templates/main/img/mouse/relocate.svg" alt="MouseDC.ru" class="offer-image">
+                           <p class="title">Помощь в переносе<br> с другого хостинга</p>
+                           <p class="offer-link">Хотите переехать? Мы поможем перенести всё</p>
+                        </div>
+
+                        <div class="widget widget-offer whitebox popup"  onmousedown="window.location.href = '/education/'">
+                           <img src="/bitrix/templates/main/img/mouse/help.svg" alt="MouseDC.ru" class="offer-image">
+                           <p class="title">Учебные курсы</p>
+                           <p class="offer-link">Запишитесь на интенсивные курсы по созданию сайтов.</p>
+                        </div>
+
+<div id="bxdynamic_SidebarPromoMouseMove_start" style="display:none"></div>&nbsp;<div id="bxdynamic_SidebarPromoMouseMove_end" style="display:none"></div>
+                     
+                  </div>
+               </div>
+               <!-- END #sidebar -->
+
+            </div>
+         
+      </main>
+       <!-- END .content -->
+
+   </div>
+   <!-- END .pagewrap -->
+
+   <!-- BEGIN .footer -->
+      
+<footer class="footer">
+
+    <div class="maxwidth grid clearfix">
+        <div class="footer-about col-tab-7 newrow-tab col-4 newrow">
+            <img src="/bitrix/templates/main/img/logo_white.svg" alt="MouseDC.ru" class="flogo">
+            <p>
+                                 Приветствуем всех в нашем уютном дата центре! Мы предоставляем качественный и надёжный хостинг. У нас можно заказать домены и VPS, прочитать статьи по созданию сайтов и информационной безопасности. А из наших видео подкастов можно узнать о том, как продвигать и развивать iT-проекты.
+                           </p>
+
+            <div class="mt--20 clearfix">
+               <a rel="nofollow" class="soc-link" href="https://vk.com/mousedc">
+                  <svg class="soc-item vk">
+                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/bitrix/templates/main/img/icons.svg#vk"></use>
+                  </svg>
+               </a>
+               <a rel="nofollow" class="soc-link" href="https://twitter.com/MouseDCru">
+                  <svg class="soc-item ">
+                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/bitrix/templates/main/img/icons.svg#tw"></use>
+                  </svg>
+               </a>
+               <a rel="nofollow" class="soc-link" href="https://t.me/joinchat/RbUJn-KtoaZjjcc4">
+                  <svg class="soc-item ">
+                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/bitrix/templates/main/img/icons.svg#tg"></use>
+                  </svg>
+               </a>
+                              <a rel="nofollow" class="soc-link" href="https://www.youtube.com/channel/UCLRBn9BK2Csp18x0mvvYyzQ">
+                  <svg class="soc-item ">
+                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/bitrix/templates/main/img/icons.svg#yt"></use>
+                  </svg>
+               </a>
+               <a rel="nofollow" class="soc-link" href="https://yandex.ru/q/org/mousedc_ru/">
+                  <svg class="soc-item ">
+                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/bitrix/templates/main/img/icons.svg#yq"></use>
+                  </svg>
+               </a>
+               <a rel="nofollow" class="soc-link" href="https://zen.yandex.ru/id/6125ffc589f84026734c8eef">
+                  <svg class="soc-item ">
+                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/bitrix/templates/main/img/icons.svg#ye"></use>
+                  </svg>
+               </a>
+               <a rel="nofollow" class="soc-link" href="https://www.deviantart.com/mousedc">
+                  <svg class="soc-item ">
+                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/bitrix/templates/main/img/icons.svg#da"></use>
+                  </svg>
+               </a>
+               <a rel="nofollow" class="soc-link" href="https://pikabu.ru/@MouseDC">
+                  <svg class="soc-item ">
+                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/bitrix/templates/main/img/icons.svg#pb"></use>
+                  </svg>
+               </a>
+            </div>
+            <p class="footer-dev">
+               <a href="https://www.pervaja.com/">
+                  Фирменный стиль от:
+                  <img src="/bitrix/templates/main/img/pervaja_30_30.png" alt="www.pervaja.com" width="20" height="20" style="border-radius:4px; vertical-align: middle;">
+                  «Первая Веб Студия»
+               </a>
+            </p>
+        </div>
+        <div class="footer-menu col-4">
+            
+<p class="footer-title on-desktop">Меню:</p>
+<ul class="fmenu__list">
+   <li class="fmenu__item"><a href="/">Хостинг</a></li>
+   <li class="fmenu__item"><a href="/domains/">Домены</a></li>
+   <li class="fmenu__item"><a href="/vps/">VPS</a></li>
+   <li class="fmenu__item"><a href="/learning/">Статьи</a></li>
+      <li class="fmenu__item"><a href="/docs/">Документы</a></li>
+   <li class="fmenu__item"><a href="/news/">Новости</a></li>
+   <li class="fmenu__item"><a href="/partners/">Партнёры</a></li>
+   <li class="fmenu__item"><a href="/vacancy/">Вакансии</a></li>
+   <li class="fmenu__item"><a href="/docs/ratings.php">Рейтинги</a></li>
+   <li class="fmenu__item"><a href="/docs/bounty.php">Поиск уязвимостей</a></li>
+</ul>
+        </div>
+        <div class="footer-contacts col-tab-5 col-4">
+            <img src="/bitrix/templates/main/img/mouse/call_blue.svg" alt="MouseDC.ru" class="footer-img">
+                        <p class="footer-title on-desktop">Документы:</p>
+            <ul class="fmenu__list mb--30">
+               <li class="fmenu__item"><a href="/docs/agreement.php">Пользовательское соглашение</a></li>
+               <li class="fmenu__item"><a href="/docs/privacy.php">Политика конфиденциальности</a></li>
+               <li class="fmenu__item"><a href="/docs/offer.php">Публичная оферта</a></li>
+               <li class="fmenu__item"><a href="/docs/spam.php">Антиспам соглашение</a></li>
+            </ul>
+            <p class="mb--30">
+               Тех. поддержка:
+               <b><a href="mailto:support@mousedc.ru">support@mousedc.ru</a></b>
+            </p>
+            <p class=" mb--30">
+                Copyright © 2019-2022 «MouseDC.ru».<br>
+                Все права защищены товарными<br>
+                 знаками и свидетельствами.
+            </p>
+        </div>
+    </div>
+</footer>
+   <!-- END .footer -->
+
+
+   <!-- MODALS -->
+   <div class="modal ajax-modal">
+       <div class="modal-window">
+           <div class="modal-title">
+               <div class="modal-title-text"></div>
+               <div class="close-modal"></div>
+           </div>
+           <div class="modal-content"></div>
+       </div>
+   </div>
+
+   <!-- #mob-menu -->
+      
+<div id="mob-menu" class="modal modal-mob-menu">
+    <div class="modal-window">
+        <div class="modal-title">
+            <div class="modal-title-text">Меню:</div>
+            <div class="close-modal"></div>
+        </div>
+        <div class="modal-content">
+            <ul class="mob-menu">
+                <li class="mob-menu-item ">
+                   <a href="/">Хостинг</a>
+                </li>
+                <li class="mob-menu-item ">
+                   <a href="/domains/">Домены</a>
+                </li>
+                                <li class="mob-menu-item mob-menu-item-current">
+                   <a href="/learning/">Статьи</a>
+                </li>
+                                <li class="mob-menu-item ">
+                   <a href="/news/">Новости</a>
+                </li>
+                <li class="mob-menu-item ">
+                   <a href="/partners/">Партнёрам</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+   <!-- / #mob-menu -->
+
+   
+         <!-- COUNTERS -->
+
+         
+<!-- Yandex.Metrika counter -->
+   <noscript><div><img src="https://mc.yandex.ru/watch/54875290" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<!-- VK pixel -->
+   <noscript><img src="https://vk.com/rtrg?p=VK-RTRG-396256-48AFq" style="position:fixed; left:-999px;" alt=""/></noscript>
+<!-- VK pixel -->
+
+<!-- Rating@Mail.ru counter -->
+   <noscript><div>
+   <img src="https://top-fwz1.mail.ru/counter?id=3136158;js=na" style="border:0;position:absolute;left:-9999px;" alt="Top.Mail.Ru" />
+   </div></noscript>
+<!-- //Rating@Mail.ru counter -->
+
+
+      <!-- /COUNTERS -->
+   
+
+   
+   <div class="to_top" onmouseup="window.scrollTo({top: 0, left: 0, behavior: 'smooth'});"><span>⇡ наверх</span></div>
+   <link href="/bitrix/templates/main/css/fonts.css" type="text/css" rel="stylesheet" />
+   <script type="text/javascript">if(!window.BX)window.BX={};if(!window.BX.message)window.BX.message=function(mess){if(typeof mess==='object'){for(let i in mess) {BX.message[i]=mess[i];} return true;}};</script>
+<script type="text/javascript">(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_WINDOW_CONTINUE':'Продолжить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script><script type="text/javascript" src="/bitrix/js/main/core/core.js?1659695688478033"></script><script>BX.setJSList(['/bitrix/js/main/core/core_ajax.js','/bitrix/js/main/core/core_promise.js','/bitrix/js/main/polyfill/promise/js/promise.js','/bitrix/js/main/loadext/loadext.js','/bitrix/js/main/loadext/extension.js','/bitrix/js/main/polyfill/promise/js/promise.js','/bitrix/js/main/polyfill/find/js/find.js','/bitrix/js/main/polyfill/includes/js/includes.js','/bitrix/js/main/polyfill/matches/js/matches.js','/bitrix/js/ui/polyfill/closest/js/closest.js','/bitrix/js/main/polyfill/fill/main.polyfill.fill.js','/bitrix/js/main/polyfill/find/js/find.js','/bitrix/js/main/polyfill/matches/js/matches.js','/bitrix/js/main/polyfill/core/dist/polyfill.bundle.js','/bitrix/js/main/core/core.js','/bitrix/js/main/polyfill/intersectionobserver/js/intersectionobserver.js','/bitrix/js/main/lazyload/dist/lazyload.bundle.js','/bitrix/js/main/polyfill/core/dist/polyfill.bundle.js','/bitrix/js/main/parambag/dist/parambag.bundle.js']);
+BX.setCSSList(['/bitrix/js/main/lazyload/dist/lazyload.bundle.css','/bitrix/js/main/parambag/dist/parambag.bundle.css']);</script>
+<script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','SERVER_TZ_OFFSET':'10800','UTF_MODE':'Y','SITE_ID':'s1','SITE_DIR':'/'});</script><script type="text/javascript" src="/bitrix/js/main/jquery/jquery-1.8.3.min.js?165969568993637"></script>
+<script type="text/javascript" src="/bitrix/js/main/polyfill/customevent/main.polyfill.customevent.js?1659695688913"></script>
+<script type="text/javascript" src="/bitrix/js/ui/dexie/dist/dexie.bitrix.bundle.js?1659695679196472"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_ls.js?165969568810430"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_fx.js?165969568816888"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_frame_cache.js?165969568817069"></script>
+
+
+<script type="text/javascript" src="/bitrix/templates/main/js/general.js?16596956929885"></script>
+<script type="text/javascript" src="/bitrix/templates/main/js/additional.js?16596956924182"></script>
+<script type="text/javascript" src="/bitrix/templates/main/js/counters.js?16596956922892"></script>
+<script type="text/javascript" src="/bitrix/templates/main/js/highlight.min.js?165969569249059"></script>
+<script type="text/javascript">var _ba = _ba || []; _ba.push(["aid", "98a093957f5928f45457e78cdf908270"]); _ba.push(["host", "www.mousedc.ru"]); (function() {var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true;ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ba, s);})();</script>
+
+
+<script>
+      jQuery(document).ready(function ($) {
+         // console.log('Code highlited');
+         hljs.initHighlightingOnLoad();
+      });
+   </script>
+
+
+
+<script type="text/javascript">
+   jQuery(document).ready(function ($) {
+
+      var $body = $('body');
+
+      // ____ TOGGLE sidenav __________________
+      $body.on('click', '.sidenav-mobile-toogle', function () {
+           var $box = $(this).closest('.widget-sidenav');
+           $box.toggleClass('now-opened');
+      });
+
+      // ____ TOGGLE children _________________
+      $body.on('click', '.open-children', function () {
+           var $box = $(this).siblings('.sidenav-children');
+           $box.toggleClass('sidenav-closed');
+           $(this).toggleClass('now-closed');
+      });
+
+   });
+</script>
+
+<script>iFrameLazyLoad('VideoiFrameSidebar634', 'https://vk.com/video_ext.php?oid=-182806618&id=456239079&hash=27156e54ae4ee57d&hd=2');</script>
+</body>
+</html>
+<!--2eeadb851570fd74d1803e3db36741c7-->

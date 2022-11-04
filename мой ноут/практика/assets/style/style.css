@@ -1,0 +1,250 @@
+@import './fonts.css';
+
+:root {
+    --font-color: #48555B;
+    --light-color: #fff;
+}
+
+/* BASE CONFIG */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+button {
+    background: none;
+    border: none;
+}
+/* BASE CONFIG */
+
+/* HERO */
+.hero {
+    display: flex;
+    padding: 41px 0 71px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFFFFF;
+    height: 100vh;
+    background:  url(../images/bg.jpg) no-repeat center/cover;
+
+}
+.hero__title {
+    font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 70px;
+    text-align: center;
+    letter-spacing: 5.70937px;
+    color: #FFFFFF;
+}
+.hero__desk {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.hero__scroll-down {
+    font-size: 12px;
+    letter-spacing: 3.7px;
+    color: #FFFFFF;
+}
+/* HERO */
+.conteiner {
+    max-width: 960px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+.row {
+    display: flex;
+}
+.col-4 {
+    width: 33.33333%;
+}
+.col-6 {
+    width: 50%;
+}
+.sea-btn {
+    width: 150px;
+height: 40px;
+background: #00A4E5;
+font-size: 13px;
+line-height: 15px;
+letter-spacing: 0.5px;
+color: var(--light-color);
+font-weight: 500;
+}
+/* HEADER */
+.header {
+    height: 65px;
+    border: 1px solid #E6E6E6;
+}
+.header__link {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 1.09091px;
+    color: #48555B;
+
+}
+.header__link:hover {
+    font-weight: 500;
+    color: #00A4E5;    ;
+}
+.header__link:not(:last-child) {
+    margin-right: 40px;
+}
+.header__conteiner {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+/* HEADER */
+/* ABOUT */
+.about {
+    padding: 58px 0;
+}
+.about__heading {
+    position: relative;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 2.30625px;
+    color: #48555B;
+    text-transform: uppercase;
+    margin-bottom: 92px;
+}
+.about__heading::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 50px;
+    height: 2px;
+    background-color: #00A4E5;
+    
+}
+.about__left-part {
+    max-width: 405px;
+}
+.about__title {
+    font-size: 20px;
+    line-height: 23px;
+    align-items: flex-end;
+    letter-spacing: 0.1875px;
+    color: #48555B;
+    margin-bottom: 30px;
+}
+.about__title_sky {
+    color: #16ACE8;
+}
+.about__desc {
+    font-size: 13px;
+    line-height: 23px;
+    align-items: center;
+    letter-spacing: 0.1875px;
+    color: #48555B;
+}
+.about__right_part {
+    padding-left: 12px;
+}
+.about__card {
+    height: 225px;
+    padding: 15px;
+
+}
+.about__row {
+    column-gap: 22px;
+}
+.about__step {
+    font-size: 24px;
+    line-height: 29px;
+    align-items: center;
+    letter-spacing: 0.1875px;
+    color: #FFFFFF;
+}
+.about__card_one {
+    background: url(../images/1.jpg) no-repeat center/cover;
+}
+.about__card_two {
+    background: url(../images/2.jpg) no-repeat center/cover;
+}
+.about__card_three {
+    background: url(../images/3.jpg) no-repeat center/cover;
+}
+/* ABOUT */
+/* SERVICES */
+.services {
+    padding: 62px 0;
+}
+.services__top {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.services__title {
+    position: relative;
+    height: 25px;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 2.30625px;
+    color: var(--font-color);
+}
+.services__title::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    bottom: -10px;
+    background-color: #00A4E5;
+}
+.services__right {
+    display: flex;
+}
+.services__desk {
+    width: 420.4px;
+    font-size: 12px;
+    line-height: 19px;
+    letter-spacing: 0.2px;
+    color: var(--font-color);
+    margin-right: 31.6px;
+}
+.services__row {
+    margin-top: 76px;
+    column-gap: 28px;
+}
+.serveces__card {
+    padding: 38px 21px;
+    border: 1px solid #E6E6E6;
+}
+.section__sm-title {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.426667px;
+    color: #48555B;
+    margin: 25px 0 13px;
+}
+.section__sm-desk {
+    font-size: 13px;
+    line-height: 23px;
+    align-items: center;
+    letter-spacing: 0.1875px;
+    color: #48555B;
+}
+/* SERVICES */
+
+
+
+
+
+

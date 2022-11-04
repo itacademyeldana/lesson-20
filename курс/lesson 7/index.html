@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <form>
+        <label for="name">Full name:</label>
+        <input type="text" id="name" placeholder="Enter your full name">
+        <label for="password">password:</label>
+        <input type="password" placeholder="Enter your password">
+        <label for="number">number:</label>
+        <input type="number" step="1" placeholder="Enter your number">
+        <label for="email">email:</label>
+        <input type="email" placeholder="Enter your email">
+        <input type="submit">
+        <button>Send</button>
+        <br><br>
+        <input type="file">
+        <input type="image">
+        <input type="range">
+        <input type="color">
+        <label for="labl">Выберите язык</label>
+        <select id="labl">
+        <option disabled selected>Выберите язык</option>
+        <optgroup label="xxxx">
+            <option value="1">RU</option>
+            <option value="2">ENG</option>
+        </optgroup>
+        <optgroup label="xxxx">
+            <option value="3">KGZ</option>
+            <option value="4"> KZ</option>
+        </optgroup>
+        </select>
+        <label for="agree">Вы согласны с...?</label>
+        <input id="agree" type="checkbox">
+        <br><br>
+        <label for="male">Мужской</label>
+        <input disabled type="radio" id="male" name="gender">
+        <label for="famale">Женский</label>
+        <input type="radio" id="famale" name="gender">
+        <br><br>
+        <div class="vote">
+        <input id="vote" type="checkbox">
+        <label id="vote">Проголосовать</label>
+        <label id="vote"></label>
+        </div>
+    </form>
+</body>
+</html>

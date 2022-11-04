@@ -1,0 +1,20 @@
+p {color:  green;}
+.text {color:  red;}
+#first {color:  blue;}
+/* [target] {color: green:} */
+[ href ="https://www.google.com/?client=safari"]
+ {color: blueviolet;}
+ [ href ="https://sso.dzen.ru/install?uuid=60c10d93-8df4-4506-8123-8297e4671be7"] {color: yellow;}
+[src$=".jpg"] {width: 200px;transition: 0.6s;}
+[href*="//"] {}
+div h4 {color:  green;}
+.card .title { color: brown;}
+.card > .title {color:green;}
+.desk + .p {color: blue;}
+.desk ~ .desk2 {color: aqua;}
+.test:hover{color:red;}
+.text3:first-child{color: palevioletred;}
+.text3:last-child{color: blue;}
+h3::before{content: "<";}
+h3::after {content: ">";}
+

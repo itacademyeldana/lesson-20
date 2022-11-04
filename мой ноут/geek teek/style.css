@@ -1,0 +1,35 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.conteiner {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+
+} 
+.button {
+    width: 150px;
+    height: 150px;
+    background-color: aqua;
+    border: none;
+    border-radius: 20%;
+    font-size: 20px;
+    color: #fff;
+    font-family: cursive;
+    box-shadow: 5px 5px 10px blueviolet;
+    transition: .3s; 
+
+} 
+.button:hover {
+    transform: scale(1.2) rotate(720deg);
+    background-color: deepskyblue;
+    color: #000;
+    font-size: 25px;
+    box-shadow: 5px 5px 10px purple;
+
+}
