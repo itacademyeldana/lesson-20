@@ -58,13 +58,78 @@ button {
 	align-items: center;
 }
 .header__logo {
+	position: relative;
 	font-size: 28px;
+
 }
 .header__link {
 	font-size: 22px;
 	margin-left: 15px;
 }
-/*HEADER SECTION*/
+.burger {
+	display: none;
+}
+.burger__btn {
+	position: relative;
+	display: inline-block;
+	width: 40px;
+	z-index: 9999;
+	height: 3px;
+	transition: .6s;
+	background-color: var(--light);
+}
+.burger__btn::before {
+	content: "";
+	position: absolute;
+	width: 40px;
+	height: 3px;
+	transition: .6s;
+	background-color: var(--light);
+	top: -10px;
+	left: 0;
+}
+.burger__btn::after {
+	content: "";
+	position: absolute;
+	width: 40px;
+	height: 3px;
+	transition: .6s;
+	background-color: var(--light);
+	bottom: -10px;
+	left: 0;
+}
+#burger:checked +.burger__btn {
+	background-color: var(--dark);
+}
+#burger:checked +.burger__btn:before {
+	transform: rotate(45deg);
+	top: 0;
+}
+#burger:checked +.burger__btn:after {
+	transform: rotate(-45deg);
+	bottom: 0;
+}
+.burger__nav {
+	position: absolute;
+	background: var(--dark);
+	left: 0;
+	transition: .6s;
+	display: block;
+	top: -200px;
+	width: 100%;
+	padding: 20px;
+
+}
+.burger__link {
+	display: block;
+	text-align: center;
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+#burger:checked ~.burger__nav {
+	top: 54px;
+}
+ /*HEADER SECTION*/
 
 /* HERO SECTION */
 .hero {
@@ -76,6 +141,7 @@ button {
 	align-items: center;
 	padding: 80px 0;
 	background: url("../images/bg.jfif") no-repeat center/cover fixed;
+
 }
 .hero::before {
 	content: "";
@@ -103,6 +169,7 @@ button {
 /* HERO SECTION */
 .films {
 	padding: 80px 0;
+	background: var(--dark);
 }
 .films__grid {
 	display: grid;
